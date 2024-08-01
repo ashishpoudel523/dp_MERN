@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <div id="gift-box" class="hide">🎁</div>
+<button id="click-btn">Show the box</button>
+<script>
+const gift = document.getElementById('gift-box')
+const btn = document.getElementById('click-btn')
+btn.addEventListener('click', ()=>[
+  gift.classList.remove('hide')
+])
+</script>
+    Hello World
+    <!-- <p id="hello"></p> -->
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div id="red" name="ashish">
+      <h1>Here:</h1>
+    </div>
+    <form action="" method="post">
+      <input type="radio" class="name" />cc <input type="text" class="name" />dd
+      <button id="poudel">Login</button>
+      <p class="all" name="dsa">dsadsadsadsa</p>
+      <p class="ball" name="dsa">ddddddddddddd</p>
+      <p class="call">dsdsdsssdwdwggfrgfggrg</p>
+    </form>
+    <button>Submit</button>
+    <p>Paragraph One</p>
+    <p>Paragraph Two</p>
+    <p>Paragraph Three</p>
+    <p id="change">Key =<span style="display: none;">     ABC123<span></p>
+      <h1>I am Optimus Prime</h1>
+
+      <ul>
+        <li class="bob">sass</li>
+        <li class="bob">saas</li>
+        <li class="bob">fdfd</li>
+      </ul>
+      <button id="question"></button>
+      <script>
+        const q1 = document.getElementById('question')
+        q1.textContent='Click Me'
+        q1.style.backgroundColor='blue'
+        q1.style.color='white'
+      </script>
+    <script src="script.js, ap.js"></script>
+    <script src="ap.js"></script>
+    <script>
+      const ab = document.getElementById('myBtn')
+      console.log(ab)
+      //Output: button
+
+      const zx = document.getElementsByName('dsa')
+      console.log(zx)
+      //Output: NodeList(2) [p.all, p.ball]
+
+      const all = document.getElementsByClassName("name");
+      console.log(all);
+      //Output: HTMLCollection(3) [input.name, input.name, input.name]
+
+      const myTag = document.getElementsByTagName('button')
+      console.log(myTag)
+      //Output: HTMLCollection(2) [button#myBtn, button#b1, myBtn: button#myBtn, b1: button#b1, ap: button#b1] 
+
+      const q = document.querySelector("#red");
+      console.log(q);
+      //Output: 
+      //<div id="red">
+      //  <h1>Here:</h1>
+      //</div>
+    
+      // returns Static NodeList 
+      const paragraphs = document.querySelectorAll("p");
+      console.log("BEFORE UPDATE: ", paragraphs);
+      const newParagraph = document.createElement("p");
+      //appendChild in NodeList and HTMLCollection is like this
+      document.body.appendChild(newParagraph);
+      console.log("AFTER UPDATE: ", paragraphs);
+      //Output: 
+      //BEFORE UPDATE:  NodeList(7) [p.all, p.ball, p.call, p, p, p, p#change] 
+      //AFTER UPDATE:  NodeList(7) [p.all, p.ball, p.call, p, p, p, p#change]
+
+
+      const paragraph = document.querySelector('#change');
+      console.log("innerHTML: ", paragraph.innerHTML)
+      console.log("innerText: ", paragraph.innerText)
+      console.log("textContent: ", paragraph.textContent)
+    </script>
+
+   
+    
+      <div class="myClass">
+        <p>Existing Paragraph 1</p>
+      </div>
+
+
+<button id="loginBtn">Login</button>
+
+      
+      <script>
+        // Select all <div> elements with the class 'myClass'
+        const divs = document.querySelector('.myClass');
+    
+        // Create a new <p> element
+        const newPara = document.createElement('p');
+        newPara.textContent = "It's a newly added paragraph";
+
+        //parent.appendChild(newPara)
+        divs.appendChild(newPara)
+        console.log(newPara)
+
+        const y = document.getElementById("loginBtn");
+
+        y.addEventListener("click", function () {
+          console.log("Button clicked.");
+        });
+      </script>
+    
+
+  </body>
+</html>
