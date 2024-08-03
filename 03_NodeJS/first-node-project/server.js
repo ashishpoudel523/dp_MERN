@@ -24,15 +24,3 @@ there must be in 'package.json'
 for commonJS
 const {createServer} = require('node:http') 
 */
-
-function makeFunc() {
-  const name = "Mozilla";
-  function displayName() {
-    console.log(name);
-  }
-  return displayName;
-}
-
-const myFunc = makeFunc();
-myFunc();
-myFunc();
