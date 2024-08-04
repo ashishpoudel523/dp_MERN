@@ -26,6 +26,7 @@ sequelize
 
 const db = {};
 
+//hamro table
 db.blogs = require("./blogModel")(sequelize, DataTypes);
 db.users = require("./userModel")(sequelize, DataTypes);
 

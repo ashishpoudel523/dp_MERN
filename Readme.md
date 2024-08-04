@@ -256,3 +256,19 @@ Hoisting No (temporal dead zone) No (temporal dead zone) Yes (initialized as und
 Reassignment Not allowed Allowed Allowed
 Redeclaration Not allowed Not allowed Allowed
 Initialization Required at the time of declaration Not required Not required
+
+# Temporal Dead Zone (TDZ)
+
+Temporal Dead Zone refers to the period between the start of the block or function scope and the point where the variable is initialized. During this time, the variable is in a "dead zone" and cannot be accessed. Attempting to access the variable before its initialization will result in a ReferenceError.
+
+function example() {
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+const a = 10; // `a` is initialized here
+}
+
+example();
+
+Explanation:
+
+Hoisting: The declaration const a is hoisted to the top of the function scope.
+TDZ: From the start of the example function until const a = 10 is executed, a is in the TDZ. Accessing a during this time causes a ReferenceError.
