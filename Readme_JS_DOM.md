@@ -225,3 +225,34 @@ y.addEventListener("click", function () { //MouseEvents-keyboardEvents: click,db
 </script>
 
 }
+
+# Differences between Arrow Functions and Regular Functions:
+
+Feature = Arrow Functions, Regular Functions
+Syntax = Concise, uses =>, Standard function declaration or expression
+this Binding = Lexically inherited from enclosing scope, Dynamically scoped (depends on how called)
+arguments Object = Not available, Available
+Constructor Usage = Cannot be used as constructors, Can be used as constructors with new
+prototype Property = Does not have a prototype property, Has a prototype property
+super and new.target = Inherited from enclosing scope, Defined based on how called
+Usage in Methods = Not ideal for object methods, Suitable for object methods
+Implicit Return = Implicit return for single expressions, Requires explicit return statement
+
+# Comparison Higher-Order Functions Callback Functions in a Table
+
+Feature Higher-Order Functions Callback Functions
+Definition Takes/returns functions Passed into another function
+Purpose Create abstract/flexible operations Handle events/asynchronous operations
+Examples map, filter, reduce, custom HOFs setTimeout, addEventListener, array methods
+Common Usage Functional programming, code reuse, composition Event handling, async programming, deferred execution
+Complexity Often used for more abstract and complex logic Often simpler, used in specific scenarios
+Syntax Requires functions as parameters or returns functions Functions passed as parameters
+
+# Comparison with let and var
+
+Feature const let var
+Scope Block-scoped Block-scoped Function-scoped
+Hoisting No (temporal dead zone) No (temporal dead zone) Yes (initialized as undefined)
+Reassignment Not allowed Allowed Allowed
+Redeclaration Not allowed Not allowed Allowed
+Initialization Required at the time of declaration Not required Not required

@@ -3,6 +3,7 @@ const app = express();
 // const { createBlog, editBlog, home } = require("./controller/blogController");
 const port = process.env.PORT || 3000;
 const blogRoute = require("./routes/blogRoute");
+require("./model/index");
 
 app.set("view engine", "ejs");
 
