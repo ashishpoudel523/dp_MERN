@@ -8,6 +8,9 @@ require("./model/index");
 
 app.set("view engine", "ejs");
 
+const { multer, storage } = require("./middleware/multerConfig");
+const upload = multer({ storage: storage });
+
 //request from client react or view
 app.use(express.json());
 
@@ -23,7 +26,6 @@ app.post("/blog", async (req, res) => {
   //destructuring
   const { title, subtitle, description } = req.body;
   console.log(title, subtitle, description);
-
   //since it takes time to insert data in table, we should use async await
   await blogs.create({
     //table column : value
