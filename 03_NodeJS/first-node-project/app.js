@@ -36,6 +36,6 @@ app.post("/blog", async (req, res) => {
   res.redirect("/blog/home");
 });
 
-app.listen(3000, () => {
-  console.log("Hi");
+app.listen(port, () => {
+  console.log(`Server started at https://localhost:${port}`);
 });

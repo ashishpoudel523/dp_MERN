@@ -13,6 +13,22 @@ popular Node.js package is nodemon, a tool used to automatically restart a progr
 
 # Express is nodejs web framework that will allow you to start and configure a server with very little overhead so you can focus on the important work of defining server behavior.
 
+<script>
+if there is nodemon installed, and in package.json there's 
+"scripts":{
+  "start/test": "nodemon app.js",
+  you can run server by "npm start/test"
+AND if "scripts": {"dev/or any other word": "nodemon app.js"},
+you should do "npm run dev/or any other word" 
+}
+*/
+
+
+EJS (js+html+additional features) =  npm i ejs for embedded javascript
+for that 
+app.set('view engine', 'ejs')
+</script>
+
 # Middleware is software that sits between the operating system and the applications on a network, providing common services and capabilities to applications outside of what's offered by the operating system. In web development, middleware refers to functions or methods that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
 
 In the Context of Express.js
@@ -24,11 +40,14 @@ End the request-response cycle.
 Call the next middleware function in the stack.
 If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
 
-Types of Middleware
-Application-level Middleware: Bound to an instance of the express object and used throughout the app.
+Types of Middleware:
 
-javascript
-Copy code
+#1 Application-level Middleware: Bound to an instance of the express object and used throughout the app.
+
+# code
+
+<script>
+//importing module
 const express = require('express');
 const app = express();
 
@@ -42,10 +61,9 @@ res.send('Hello World!');
 });
 
 app.listen(3000);
-Router-level Middleware: Bound to an instance of express.Router(), useful for modularizing the application.
 
-javascript
-Copy code
+#2 Router-level Middleware: Bound to an instance of express.Router(), useful for modularizing the application.
+
 const express = require('express');
 const router = express.Router();
 
@@ -61,7 +79,8 @@ res.send('Home Page');
 const app = express();
 app.use('/home', router);
 app.listen(3000);
-Error-handling Middleware: Defined with four arguments instead of three. These middleware functions handle errors in the application.
+
+#3 Error-handling Middleware: Defined with four arguments instead of three. These middleware functions handle errors in the application.
 
 javascript
 Copy code
@@ -69,19 +88,19 @@ app.use((err, req, res, next) => {
 console.error(err.stack);
 res.status(500).send('Something broke!');
 });
-Built-in Middleware: Provided by Express to handle common tasks.
 
-javascript
-Copy code
+
+#4 Built-in Middleware: Provided by Express to handle common tasks.
+
 app.use(express.json()); // Parses incoming requests with JSON payloads
 app.use(express.urlencoded({ extended: true })); // Parses incoming requests with URL-encoded payloads
 Third-party Middleware: Installed via npm and used to perform tasks such as logging, authentication, etc.
 
-javascript
-Copy code
+
 const morgan = require('morgan');
 app.use(morgan('combined')); // Logs HTTP requests
-Real-life Example
+
+# Real-life Example
 Imagine you are building an e-commerce website:
 
 Logging Middleware: Logs the details of every request for monitoring and debugging.

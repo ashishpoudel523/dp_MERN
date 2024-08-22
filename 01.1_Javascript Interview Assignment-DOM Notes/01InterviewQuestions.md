@@ -93,8 +93,13 @@ myFunc();
 +++++++++++++++++++++++++++++++++++++++++++++
 
 1. var = function scope, hoisting yes, reassignment, redeclaration, not used now
-   let = block scope, no hoisting temporal dead zone, reassigned, no redeclared
-   const = block scope, no(hoisting, ressign, redeclare)
+   let = block scope, no hoisting - temporal dead zone (TDZ), reassigned, no redeclared
+   const = block scope, no(hoisting-TDZ, ressign, redeclare)
+
+   console.log(myVar); // Output: undefined (var is hoisted and initialized)
+   console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization - TDZ
+   var myVar = 10;
+   let myLet = 20;
 
 2. global , local scope
    =global accessible from anywhere in the code., local accessible only within that block or function.

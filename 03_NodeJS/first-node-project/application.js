@@ -1,19 +1,3 @@
-/*
-if there is nodemon installed, and in package.json there's 
-"scripts":{
-  "start/test": "nodemon app.js",
-  you can run server by "npm start/test"
-AND if "scripts": {"dev/or any other word": "nodemon app.js"},
-you should do "npm run dev/or any other word" 
-}
-*/
-
-/*
-EJS (js+html+additional features) =  npm i ejs for embedded javascript
-for that 
-app.set('view engine', 'ejs')
-*/
-
 import express, { json } from "express";
 const app = express();
 const port = process.env.PORT || 3000;
