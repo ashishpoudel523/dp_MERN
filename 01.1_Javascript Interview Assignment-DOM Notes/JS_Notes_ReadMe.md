@@ -79,7 +79,7 @@ Returns a live NodeList (in case of getElementByName only NodeList is live.) of 
 
 # 3. getElementsByTagName(tagName):
 
-Select elements by their tag name(<p>, <html>, etc.). Returns live HTMLCollection. If no element, returns Empty HTMLColllection
+Select elements by their tag name(<p>, <html>, etc.). Returns live HTMLCollection. If no element, returns Empty HTMLCollection
 
 # 4. const elements = document.getElementsByClassName('myClass');
 
@@ -96,7 +96,7 @@ Eg.:
 <div class="myClass">
 <p>Existing Paragraph 1</p>
 </div>
-<script>
+<script>  
 // Select all <div> elements with the class 'myClass'
 const divs = document.querySelector('.myClass');
 // Create a new <p> element
@@ -112,9 +112,15 @@ console.log(newPara)
 
 Selects all elements that match the CSS selector. Returns a static NodeList. A change in the document isn't reflected in the NodeList.
 
-const newElement = document.createElement('div');
+# const newElement = document.createElement('div');
 
-# Change/Manipulating Contents of DOM Elements
+= creates new element Node
+
+# createTextNode()
+
+= create new text node
+
+# CHANGE/Manipulating Contents of DOM Elements
 
 1. innerHTML: Gets or sets the HTML content of an element. It's not considered secured, may cause potential security risks
    element.innerHTML = '<p>New HTML content</p>';
@@ -141,6 +147,8 @@ innerText: Key = ,
 textContent: Key = ABC123,
 }
 
+# CREATING/APPENDING ELEMENTS
+
 # parentElement.appendChild(newElement):
 
 appendChild doesn't directly work with NodeList and HTMLCollection like querySelectorAll, getElementsByClassName, getElementsByTagName. Let's say with all plural data.
@@ -149,9 +157,11 @@ Eg: document.body.appendChild(newPara)
 And appendChild directly work with singular data like querySelector, getElementById (individual DOM nodes)
 Eg.: dadParagraph.appendChild(sonParagraph)
 
-parentElement.insertBefore(newElement, existingElement);
+# parentElement.insertBefore(newElement, existingElement);
 
-parentElement.removeChild(childElement);
+# parentElement.removeChild(childElement);
+
+# elem.replaceChild(newChild, oldChild)
 
 # Element.getAttribute()
 
@@ -319,7 +329,7 @@ const staffUnique = new Set(staff);
 console.log(staffUnique);
 </script>
 
-# Arrys vs Sets
+# Arrays vs Sets
 
 Arrys = use when you need ordered list of values (might contain duplicates)
 use when you need to manipulate data

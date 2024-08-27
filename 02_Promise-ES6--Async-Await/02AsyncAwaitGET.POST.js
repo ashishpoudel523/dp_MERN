@@ -142,8 +142,7 @@ createContact();
 2. GET Request (Read Contact by ID)
 To fetch a contact by ID and check if the response is successful:
 
-javascript
-Copy code
+
 async function getContact(id) {
   try {
     const response = await fetch(`http://localhost:5000/api/contacts/${id}`);
@@ -164,8 +163,7 @@ getContact(1); // Replace with the actual ID you want to fetch
 3. PUT Request (Update Contact)
 To update an existing contact by ID and check if the response is successful:
 
-javascript
-Copy code
+
 async function updateContact(id) {
   try {
     const response = await fetch(`http://localhost:5000/api/contacts/${id}`, {
@@ -198,8 +196,6 @@ updateContact(1); // Replace with the actual ID you want to update
 4. DELETE Request (Delete Contact)
 To delete a contact by ID and check if the response is successful:
 
-javascript
-Copy code
 async function deleteContact(id) {
   try {
     const response = await fetch(`http://localhost:5000/api/contacts/${id}`, {
