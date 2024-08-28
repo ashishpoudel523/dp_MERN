@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const connectToDatabase = require("./database/index.js");
 
@@ -19,6 +20,6 @@ app.get("/api/about", (req, res) => {
   });
 });
 
-app.listen(3040, (req, res) => {
+app.listen(process.env.PORT, (req, res) => {
   console.log(`Server is running successfully`);
 });
