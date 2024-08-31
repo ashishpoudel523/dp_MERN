@@ -1,13 +1,10 @@
 todos
-digital pathshala nodejs day 6 continue
-
-async await detail write in copy, practice
-11-2 nodejs intro in copy
+digital pathshala nodejs day 11 continue
 
 5-6 sigma web harry spotify do project
 6-7 tic ta toe from apna college javascript course
 
-2-3 Jonas course continue bank app
+2-3 Jonas js course continue bank app
 
 3-4 python 100 days
 4-5 Kushal dotel problem solving videos
