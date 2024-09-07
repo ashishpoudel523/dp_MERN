@@ -114,7 +114,9 @@ Master any technology.
 From programming languages and web development to data science and cybersecurity
 </script>
 
-# Middleware is software that sits between the operating system and the applications on a network, providing common services and capabilities to applications outside of what's offered by the operating system. In web development, middleware refers to functions or methods that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+# MIDDLEWARE
+
+software that sits between the operating system and the applications on a network, providing common services and capabilities to applications outside of what's offered by the operating system. In web development, middleware refers to functions or methods that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
 
 In the Context of Express.js
 In an Express application, middleware functions are functions that can:
@@ -127,7 +129,7 @@ If the current middleware function does not end the request-response cycle, it m
 
 Types of Middleware:
 
-#1 Application-level Middleware: Bound to an instance of the express object and used throughout the app.
+# 1 Application-level Middleware: Bound to an instance of the express object and used throughout the app.
 
 # code
 
