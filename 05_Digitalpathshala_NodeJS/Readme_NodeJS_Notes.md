@@ -1,14 +1,3 @@
-todos
-digital pathshala nodejs day 11 continue
-
-5-6 sigma web harry spotify do project
-6-7 tic ta toe from apna college javascript course
-
-2-3 Jonas js course continue bank app
-
-3-4 python 100 days
-4-5 Kushal dotel problem solving videos
-
 # NODEJS
 
 open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project!

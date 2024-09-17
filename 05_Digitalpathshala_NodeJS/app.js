@@ -84,6 +84,13 @@ app.get("/blog", async (req, res) => {
 });
 
 //GET BY ID
+
+/*
+req.body: Comes from the body of the request, typically used in POST, PUT, and PATCH requests. Requires middleware (express.json() or express.urlencoded()) to parse the body content.
+
+req.params: Comes from the URL path, used in route definitions with dynamic segments.  Automatically available without extra middleware
+*/
+
 app.get("/blog/:id", async (req, res) => {
   const { id } = req.params;
   const blog = await Blog.findById(id); //returns an object

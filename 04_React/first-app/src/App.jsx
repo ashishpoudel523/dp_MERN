@@ -22,12 +22,13 @@ const channels = [
 ];
 
 function App() {
+  //its a component, not a js function
   const [activeChannel, setActiveChannel] = useState(channels[2]);
 
   console.log(activeChannel, "activeChannel");
 
   function handleChannelClick(channel) {
-    setActiveChannel(channel)
+    setActiveChannel(channel);
   }
 
   return (
@@ -36,10 +37,11 @@ function App() {
       Currrent Active Channel: {activeChannel.name}
       {channels.map((channel) => {
         return (
-          <div 
-          className = 'ap'
-          style={{ color: "red" }} 
-          onClick={()=> handleChannelClick(channel)}>
+          <div
+            className="ap"
+            style={{ color: "red" }}
+            onClick={() => handleChannelClick(channel)}
+          >
             {channel.name}
           </div>
         );
