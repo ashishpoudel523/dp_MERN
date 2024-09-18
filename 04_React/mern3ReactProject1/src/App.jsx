@@ -1,14 +1,21 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import {} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Services from "./Services";
+import Test from "./Test";
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  const name = "Ashish";
-  return <h1 className="ap"> {1 + 1} </h1>;
-}
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/test" element={<Test />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;
