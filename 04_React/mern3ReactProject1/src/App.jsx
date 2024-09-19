@@ -1,9 +1,11 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Services from "./Services";
-import Test from "./Test";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Test from "./pages/Test";
+import "./App.css";
+import UseState from "./Hooks/UseState";
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/useState" element={<UseState />} />
       </Routes>
     </BrowserRouter>
   );
