@@ -12,7 +12,7 @@ import { useState } from "react";
   console.log(setData);
 */
 
-const UseState = () => {
+const LearnUseState = () => {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
   const [data, setData] = useState({
@@ -38,4 +38,4 @@ const UseState = () => {
   );
 };
 
-export default UseState;
+export default LearnUseState;

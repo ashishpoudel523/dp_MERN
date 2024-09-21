@@ -5,7 +5,8 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Test from "./pages/Test";
 import "./App.css";
-import UseState from "./Hooks/UseState";
+import LearnUseState from "./Hooks/LearnUseState";
+import LearnUseEffect from "./Hooks/LearnUseEffect";
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/test" element={<Test />} />
-        <Route path="/useState" element={<UseState />} />
+        <Route path="/use-state" element={<LearnUseState />} />
+        <Route path="/use-effect" element={<LearnUseEffect />}></Route>
       </Routes>
     </BrowserRouter>
   );
