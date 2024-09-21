@@ -1,21 +1,52 @@
 /*kunai sensitive file like .env jhukkera GitHub ma upload vayo vane 
 cache clear garna lai
-git rm --cached filename
+git rm --cached filename (jastai git rm --cached .env)
 Ani feri push garni, tyo file hatxa hai ta*/
 
-require("dotenv").config();
-const express = require("express");
-const connectToDatabase = require("./database/index.js");
-const Blog = require("./model/blogModel.js");
+//app.mjs xa vane, ES6 Module import, export use garna , package.json ma "type": "module" lekhna pardaina
+
+//CommonJS
+//require("dotenv").config();
+//ES Module
+import dotenv from "dotenv";
+dotenv.config();
+
+//CommonJS
+//const express = require("express");
+
+//ES Module
+import express from "express";
+
+// CommonJS
+//const connectToDatabase = require("./database/index.js");
+
+//ES6 Modules
+import connectToDatabase from "./database/index.js";
+
+// CommonJS
+//const Blog = require("./model/blogModel.js");
+
+//ES6 Modules
+import Blog from "./model/blogModel.js";
 
 const app = express();
 
 //use this middleware to make nodejs understand the data coming from postman is in json format
 app.use(express.json());
 
-const { multer, storage } = require("./middleware/multerConfig.js");
+// CommonJS
+//const { multer, storage } = require("./middleware/multerConfig.js");
+
+//ES6 Modules
+import { multer, storage } from "./middleware/multerConfig.js";
+
 const upload = multer({ storage: storage });
-const fs = require("fs");
+
+//CommonJS
+//const fs = require('fs');
+
+//ES6 Modules
+import fs from "fs";
 
 connectToDatabase();
 
