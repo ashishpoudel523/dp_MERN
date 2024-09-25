@@ -23,12 +23,6 @@ import express from "express";
 //ES6 Modules
 import connectToDatabase from "./database/index.js";
 
-// CommonJS
-//const Blog = require("./model/blogModel.js");
-
-//ES6 Modules
-import Blog from "./model/blogModel.js";
-
 const app = express();
 
 //use this middleware to make nodejs understand the data coming from postman is in json format
@@ -40,6 +34,12 @@ app.use(express.json());
 //ES6 Modules
 import { multer, storage } from "./middleware/multerConfig.js";
 
+// CommonJS
+//const Blog = require("./model/blogModel.js");
+
+//ES6 Modules
+import Blog from "./model/blogModel.js";
+
 const upload = multer({ storage: storage });
 
 //CommonJS
@@ -48,15 +48,15 @@ const upload = multer({ storage: storage });
 //ES6 Modules
 import fs from "fs";
 
-connectToDatabase();
+import cors from "cors";
 
-app.get("/blog/home", (req, res) => {
-  // res.writeHead(200, { "Content-Type": "plain/html" });
-  res.status(200).json({
-    message: "This is home page",
-  });
-  //res.end(`Hello Ashish`);
-});
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
+
+connectToDatabase();
 
 //CREATE / POST OPERATION
 app.post("/blog/create", upload.single("image"), async (req, res) => {
@@ -104,6 +104,14 @@ get - /blogs
 get - /blogs/:id
 delete - /blogs/:id
 */
+
+app.get("/blog/home", (req, res) => {
+  // res.writeHead(200, { "Content-Type": "plain/html" });
+  res.status(200).json({
+    message: "This is home page",
+  });
+  //res.end(`Hello Ashish`);
+});
 
 //READ / GET ALL OPERATION
 app.get("/blog", async (req, res) => {
@@ -194,6 +202,6 @@ app.use(express.static("./storage"));
 
 app.listen(process.env.PORT, () => {
   console.log(
-    `Server is running successfully on http://localhost:${process.env.PORT}`
+    `Server is running successfully on http://localhost:${process.env.PORT}/blog/home`
   );
 });

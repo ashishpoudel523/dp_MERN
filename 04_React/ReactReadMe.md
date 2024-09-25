@@ -171,14 +171,16 @@ return () => {
 
 # 3 Types of useEffect (based on Trigger point)
 
-(a) useEffect with No Dependencies (Runs on Every Render):
+# (a) useEffect with No Dependencies (Runs on Every Render):
+
 Runs all the time (every render). Good for general updates.
 
 useEffect(() => {
 console.log("Component rendered or updated");
 });
 
-(b) useEffect with an Empty Dependency Array:
+# (b) useEffect with an Empty Dependency Array:
+
 Runs just once (on mount). Good for setup. setting up subscriptions that don’t need to change.
 
 useEffect(() => {
@@ -228,6 +230,19 @@ Example:
 
 const inputRef = useRef(null);
 inputRef.current.focus(); // Accesses the DOM element
+
+# Tailwind CSS
+
+# Install Tailwind CSS with React Vite
+
+npm install -D tailwind postcss autoprefiser
+npx tailwindcss init -p
+
+# axios
+
+npm i axios
+
+Promise based HTTP client for the browser and node.js for node + react project
 
 # React
 

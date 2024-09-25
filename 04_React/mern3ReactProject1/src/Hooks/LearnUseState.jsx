@@ -31,8 +31,8 @@ const LearnUseState = () => {
     <>
       <h1>{count}</h1>
       <h1>{data.name}</h1>
-      <button onClick={increaseCount}>+</button>
-      <button onClick={decreaseCount}>-</button>
+      <button onClick={increaseCount}>Add+</button>
+      <button onClick={decreaseCount}>Subtract-</button>
       <h1>{count2}</h1>
     </>
   );
