@@ -59,14 +59,20 @@ app.use(
 connectToDatabase();
 
 //CREATE / POST OPERATION
-app.post("/blog/create", upload.single("image"), async (req, res) => {
+app.post("/blog", upload.single("image"), async (req, res) => {
   //output: undefined aauxa because nodejs didn't understand that data is coming in json, so, app.use(express.json()) use garni mathi hai ta
 
   //yo chai object destructuring gareko hai
   //cost title = req.body.title ko satta ma yesto hai ta
   const { title, subTitle, description } = req.body;
-  console.log(req.body);
-  const { filename } = req.file;
+  //console.log(req.body);
+  let filename;
+  if (req.file) {
+    filename = "http://localhost:3020/" + req.file.filename;
+  } else {
+    filename =
+      "https://st4.depositphotos.com/14953852/22772/v/950/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
+  }
   console.log(req.file);
 
   //server-side validation
@@ -105,7 +111,7 @@ get - /blogs/:id
 delete - /blogs/:id
 */
 
-app.get("/blog/home", (req, res) => {
+app.get("/", (req, res) => {
   // res.writeHead(200, { "Content-Type": "plain/html" });
   res.status(200).json({
     message: "This is home page",
@@ -125,7 +131,7 @@ app.get("/blog", async (req, res) => {
 //GET BY ID
 
 /*
-req.body: Comes from the body of the request, typically used in POST, PUT, and PATCH requests. Requires middleware (express.json() or express.urlencoded()) to parse the body content.
+req.body: Comes from the body of the request while done in postman, typically used in POST, PUT, and PATCH requests. Requires middleware (express.json() or express.urlencoded()) to parse the body content.
 
 req.params: Comes from the URL path, used in route definitions with dynamic segments.  Automatically available without extra middleware
 */
@@ -201,7 +207,5 @@ app.delete("/blog/:id", async (req, res) => {
 app.use(express.static("./storage"));
 
 app.listen(process.env.PORT, () => {
-  console.log(
-    `Server is running successfully on http://localhost:${process.env.PORT}/blog/home`
-  );
+  console.log(`Server is running successfully`);
 });
