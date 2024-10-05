@@ -13,12 +13,12 @@ const Home = () => {
     fetchBlogs();
   }, []);
 
-  console.log(blogs);
+  // console.log(blogs);
 
   return (
     <>
       <Navbar />
-      <h1>Learning Rect + Tailwind CSS</h1>
+      <h1>Learning React + Tailwind CSS</h1>
       <div className="flex flex-wrap">
         {blogs.map((blog) => {
           return <Card blog={blog} />;
