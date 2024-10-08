@@ -158,7 +158,7 @@ app.patch("/blog/:id", upload.single("image"), async (req, res) => {
   const { title, subTitle, description } = req.body;
   let imageName;
   if (req.file) {
-    imageName = req.file.filename;
+    imageName = "http://localhost:3020/" + req.file.filename;
     const blog = await Blog.findById(id);
     const oldImageName = blog.image;
 
