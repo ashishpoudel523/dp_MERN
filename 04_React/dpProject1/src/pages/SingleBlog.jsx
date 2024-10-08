@@ -71,52 +71,13 @@ const SingleBlog = () => {
             </div>
             <div className="md:flex-1 px-4">
               <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-                {blog.title}
+                Title: <br /> {blog.title}
               </h2>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {blog.subTitle}
+                {" "}
+                <br />
+                SubTitle: <br /> {blog.subTitle}
               </p>
-              <div className="flex mb-4">
-                <div className="mr-4">
-                  <span className="font-bold text-gray-700 dark:text-gray-300">
-                    Price:
-                  </span>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    $29.99
-                  </span>
-                </div>
-                <div>
-                  <span className="font-bold text-gray-700 dark:text-gray-300">
-                    Availability:
-                  </span>
-                  <span className="text-gray-600 dark:text-gray-300">
-                    In Stock
-                  </span>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <span className="font-bold text-gray-700 dark:text-gray-300">
-                  Select Size:
-                </span>
-                <div className="flex items-center mt-2">
-                  <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-                    S
-                  </button>
-                  <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-                    M
-                  </button>
-                  <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-                    L
-                  </button>
-                  <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-                    XL
-                  </button>
-                  <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-                    XXL
-                  </button>
-                </div>
-              </div>
               <div>
                 <span className="font-bold text-gray-700 dark:text-gray-300">
                   Product Description:

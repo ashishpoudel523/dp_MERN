@@ -62,7 +62,6 @@ const CreateBlog = () => {
                 placeholder="Title*"
                 onChange={handleChange}
               />
-
               <input
                 type="text"
                 name="subTitle"

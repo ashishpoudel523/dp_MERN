@@ -68,6 +68,7 @@ function EditBlog() {
         <form onSubmit={editBlog}>
           <div class="p-8">
             <div class="flex gap-4">
+              <label>Title</label>
               <input
                 type="text"
                 name="title"
@@ -77,6 +78,7 @@ function EditBlog() {
                 value={data.title}
               />
 
+              <label htmlFor="">Subtitle</label>
               <input
                 type="text"
                 name="subTitle"
@@ -95,6 +97,7 @@ function EditBlog() {
               />
             </div>
             <div class="">
+              <label htmlFor="">Description</label>
               <textarea
                 name="description"
                 id="text"
