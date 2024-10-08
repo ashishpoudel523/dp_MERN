@@ -36,7 +36,7 @@ const CreateBlog = () => {
         "Content-Type": "multipart/form-data",
       },
     });
-    if ((response.status = 200)) {
+    if (response.status === 200) {
       navigate("/");
       console.log("form submitted");
     } else alert("Form Not Submitted!");
