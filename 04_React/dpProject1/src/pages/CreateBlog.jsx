@@ -30,12 +30,16 @@ const CreateBlog = () => {
   const createBlog = async (e) => {
     //yo preventdafault garesi form submit garda page reload hudaina
     e.preventDefault();
-    const response = await axios.post("http://localhost:3020/blog", data, {
-      headers: {
-        // content type simple text json bahek aru image xa vane multipart use garni
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const response = await axios.post(
+      "https://ashishpoudel23.onrender.com/blog",
+      data,
+      {
+        headers: {
+          // content type simple text json bahek aru image xa vane multipart use garni
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
     if (response.status === 200) {
       navigate("/");
       console.log("form submitted");
