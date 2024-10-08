@@ -68,7 +68,7 @@ app.post("/blog", upload.single("image"), async (req, res) => {
   //console.log(req.body);
   let filename;
   if (req.file) {
-    filename = "http://localhost:3020/" + req.file.filename;
+    filename = "https://ashishpoudel23.onrender.com/" + req.file.filename;
   } else {
     filename =
       "https://st4.depositphotos.com/14953852/22772/v/950/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
@@ -158,7 +158,7 @@ app.patch("/blog/:id", upload.single("image"), async (req, res) => {
   const { title, subTitle, description } = req.body;
   let imageName;
   if (req.file) {
-    imageName = "http://localhost:3020/" + req.file.filename;
+    imageName = "https://ashishpoudel23.onrender.com/" + req.file.filename;
     const blog = await Blog.findById(id);
     const oldImageName = blog.image;
 
