@@ -23,6 +23,7 @@ function EditBlog() {
   const editBlog = async (e) => {
     e.preventDefault();
     const response = await axios.patch(
+      // "http://localhost:3020/blog/"
       "https://ashishpoudel23.onrender.com/blog/" + id,
       data,
       {
@@ -33,7 +34,6 @@ function EditBlog() {
     );
     if (response.status === 200) {
       navigate("/blog/" + id);
-      alert("Blog edited");
     } else {
       alert("Something went wrong");
     }
@@ -41,13 +41,14 @@ function EditBlog() {
 
   const fetchSingleBlog = async () => {
     const response = await axios.get(
+      // "http://localhost:3020/blog/"
       "https://ashishpoudel23.onrender.com/blog/" + id
     );
     if (response.status === 200) {
       setData({
         title: response.data.data.title,
-        subTitle: response.data.data.subTitle,
         description: response.data.data.description,
+        subTitle: response.data.data.subTitle,
       });
     } else {
       alert("something went wrong");
@@ -68,7 +69,6 @@ function EditBlog() {
         <form onSubmit={editBlog}>
           <div class="p-8">
             <div class="flex gap-4">
-              <label>Title</label>
               <input
                 type="text"
                 name="title"
@@ -78,12 +78,11 @@ function EditBlog() {
                 value={data.title}
               />
 
-              <label htmlFor="">Subtitle</label>
               <input
                 type="text"
                 name="subTitle"
                 class="mt-1 block w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm"
-                placeholder="Subtitle *"
+                placeholder="subTitle *"
                 onChange={handleChange}
                 value={data.subTitle}
               />
@@ -97,13 +96,13 @@ function EditBlog() {
               />
             </div>
             <div class="">
-              <label htmlFor="">Description</label>
               <textarea
                 name="description"
                 id="text"
                 cols="30"
                 rows="10"
                 class="mb-10 h-40 w-full resize-none rounded-md border border-slate-300 p-5 font-semibold text-black"
+                placeholder="Description *"
                 onChange={handleChange}
                 value={data.description}
               ></textarea>

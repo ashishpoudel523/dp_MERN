@@ -32,6 +32,7 @@ const CreateBlog = () => {
     e.preventDefault();
     const response = await axios.post(
       "https://ashishpoudel23.onrender.com/blog",
+
       data,
       {
         headers: {

@@ -13,6 +13,7 @@ const SingleBlog = () => {
   const [blog, setBlog] = useState({});
   const fetchSingleBlog = async () => {
     const response = await axios.get(
+      // "http://localhost:3020/blog/"
       "https://ashishpoudel23.onrender.com/blog/" + id
     );
     setBlog(response.data.data);
@@ -26,6 +27,7 @@ const SingleBlog = () => {
   //DELETE BLOG
   const deleteBlog = async () => {
     const response = await axios.delete(
+      // "http://localhost:3020/blog/"
       "https://ashishpoudel23.onrender.com/blog/" + id
     );
     console.log(response.status);

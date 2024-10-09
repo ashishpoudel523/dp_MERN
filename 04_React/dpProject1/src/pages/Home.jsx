@@ -7,6 +7,7 @@ const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const fetchBlogs = async () => {
     const response = await axios.get(
+      // "http://localhost:3020/blog"
       "https://ashishpoudel23.onrender.com/blog"
     );
     setBlogs(response.data.data);
