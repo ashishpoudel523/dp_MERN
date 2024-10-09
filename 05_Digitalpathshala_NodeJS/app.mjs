@@ -5,6 +5,8 @@ Ani feri push garni, tyo file hatxa hai ta*/
 
 //app.mjs xa vane, ES6 Module import, export use garna , package.json ma "type": "module" lekhna pardaina
 
+//app.js xa vane, CommonJS use garne
+
 //CommonJS
 //require("dotenv").config();
 //ES Module
@@ -68,7 +70,9 @@ app.post("/blog", upload.single("image"), async (req, res) => {
   //console.log(req.body);
   let filename;
   if (req.file) {
-    filename = "https://ashishpoudel23.onrender.com/" + req.file.filename;
+    filename =
+      // "http://localhost:3020/"
+      "https://ashishpoudel23.onrender.com/" + req.file.filename;
   } else {
     filename =
       "https://st4.depositphotos.com/14953852/22772/v/950/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
@@ -158,7 +162,10 @@ app.patch("/blog/:id", upload.single("image"), async (req, res) => {
   const { title, subTitle, description } = req.body;
   let imageName;
   if (req.file) {
-    imageName = "https://ashishpoudel23.onrender.com/" + req.file.filename;
+    imageName =
+      // "http://localhost:3020/"
+      "https://ashishpoudel23.onrender.com/" + req.file.filename;
+
     const blog = await Blog.findById(id);
     const oldImageName = blog.image;
 
