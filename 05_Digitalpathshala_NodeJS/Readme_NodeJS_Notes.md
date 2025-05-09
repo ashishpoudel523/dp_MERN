@@ -33,6 +33,7 @@ It records the exact versions of all project dependencies and their sub-dependen
 # Difference between package.json and package-lock.json
 In Node, package.json file contains the list of dependencies and scripts in a project while the package.lock.json specifies their respective versions to ensure consistent installations in different environments.
 
+#nodemon
 popular Node.js package is nodemon, a tool used to automatically restart a program when a file changes, alleviating the need to do so manually each time you save a file
 
 if there is nodemon installed, and in package.json there's
