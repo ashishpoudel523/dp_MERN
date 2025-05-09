@@ -24,7 +24,14 @@ package-lock.json
 README.md
 ----------------------------------------
 
-# node_modules is a folder which stores external dependencies of the project. Whenever we install some external package through “npm” or “yarn” in a project locally, it gets stored into the node_modules folder located at the root of the project directory by default.
+# node_modules 
+It is a folder which stores external dependencies of the project. Whenever we install some external package through “npm” or “yarn” in a project locally, it gets stored into the node_modules folder located at the root of the project directory by default.
+
+# package-lock.json 
+It records the exact versions of all project dependencies and their sub-dependencies, including resolved URLs, integrity hashes, and more. This ensures that every time the project is installed, the same versions of packages are used, preventing inconsistencies and "it works on my machine" issues
+
+# Difference between package.json and package-lock.json
+In Node, package.json file contains the list of dependencies and scripts in a project while the package.lock.json specifies their respective versions to ensure consistent installations in different environments.
 
 popular Node.js package is nodemon, a tool used to automatically restart a program when a file changes, alleviating the need to do so manually each time you save a file
 
