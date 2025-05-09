@@ -138,7 +138,7 @@ res.send('Hello World!');
 
 app.listen(3000);
 
-#2 Router-level Middleware: Bound to an instance of express.Router(), useful for modularizing the application.
+# 2 Router-level Middleware: Bound to an instance of express.Router(), useful for modularizing the application.
 
 const express = require('express');
 const router = express.Router();
@@ -166,7 +166,7 @@ res.status(500).send('Something broke!');
 });
 
 
-#4 Built-in Middleware: Provided by Express to handle common tasks.
+# 4 Built-in Middleware: Provided by Express to handle common tasks.
 
 app.use(express.json()); // Parses incoming requests with JSON payloads
 app.use(express.urlencoded({ extended: true })); // Parses incoming requests with URL-encoded payloads
