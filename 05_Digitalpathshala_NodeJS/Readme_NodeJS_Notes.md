@@ -10,6 +10,20 @@ When modules created by other developers are used in our code, they're called de
 
 # NPM = for package management / command line tool to install, create, and share packages, dependencies of JavaScript code written for Node.js
 
+----------------------------------------
+file structure should be like this:-
+node_modules
+public
+---css
+---js
+---img
+app or server.js
+.env
+package.json
+package-lock.json
+README.md
+----------------------------------------
+
 popular Node.js package is nodemon, a tool used to automatically restart a program when a file changes, alleviating the need to do so manually each time you save a file
 
 if there is nodemon installed, and in package.json there's
