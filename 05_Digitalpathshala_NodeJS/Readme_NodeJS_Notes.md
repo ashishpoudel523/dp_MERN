@@ -24,6 +24,8 @@ package-lock.json
 README.md
 ----------------------------------------
 
+# node_modules is a folder which stores external dependencies of the project. Whenever we install some external package through “npm” or “yarn” in a project locally, it gets stored into the node_modules folder located at the root of the project directory by default.
+
 popular Node.js package is nodemon, a tool used to automatically restart a program when a file changes, alleviating the need to do so manually each time you save a file
 
 if there is nodemon installed, and in package.json there's
